@@ -28,7 +28,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 960px;
             margin: -75px auto 50px; /* Pulls content up over the banner slightly */
             padding: 20px;
             text-align: center;
@@ -51,9 +51,18 @@
             letter-spacing: 1px;
         }
 
+        h2 {
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
         .social-link {
             display: inline-block;
-            margin-top: 10px;
             color: #0077b5;
             text-decoration: none;
             font-weight: bold;
@@ -61,6 +70,11 @@
 
         .social-link:hover {
             text-decoration: underline;
+        }
+
+        .social-separator {
+            margin: 0 12px;
+            color: #999;
         }
 
         hr {
@@ -95,6 +109,93 @@
             color: #e67e22;
             border-bottom-color: #e67e22;
         }
+
+        .social-links a {
+            border-bottom: none;
+        }
+
+        .education-section {
+            margin-top: 10px;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .edu-card h3 {
+            margin: 14px 0 6px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .edu-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .edu-card a {
+            border-bottom: none;
+            color: inherit;
+        }
+
+        .edu-card a:hover {
+            color: #e67e22;
+        }
+
+        .edu-card {
+            position: relative;
+        }
+
+        .edu-image-wrap {
+            position: relative;
+            aspect-ratio: 2 / 3;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+
+        .edu-image-wrap > .edu-campus {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.45s ease, transform 0.45s ease;
+        }
+
+        .education-grid:has(.edu-card:hover) .edu-card:not(:hover) .edu-campus {
+            filter: grayscale(100%);
+        }
+
+        .edu-card:hover .edu-image-wrap {
+            z-index: 1;
+        }
+
+        .edu-card:hover .edu-campus {
+            transform: scale(1.1);
+        }
+
+        .edu-image-wrap-wvutech .edu-campus {
+            object-position: 28% center;
+        }
+
+        @media (max-width: 768px) {
+            .portrait {
+                width: 260px;
+                height: 260px;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,19 +208,50 @@
         <!-- Profile Section -->
         <img src="images/portrait.jpg" alt="Tom Thompson" class="portrait">
         <h1>Thomas V Thompson II</h1>
-        <a href="https://www.linkedin.com/in/tom-thompson-4b68394" class="social-link" target="_blank">Connect on LinkedIn</a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/tom-thompson-ii" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span class="social-separator">|</span>
+            <a href="resources/TomThompsonResume2026.pdf" class="social-link" target="_blank" rel="noopener noreferrer">Resume</a>
+        </div>
 
         <hr>
 
-        <!-- Details Section -->
-        <div class="info-section">
-            <ul>
-                <li>Senior Cinematics Tools Engineer <a href="https://lightspeed.la/en" target="_blank">Lightspeed LA</a></li>
-                <li>PhD, <a href="https://utah.edu" target="_blank">University of Utah</a>, 2001</li>
-                <li>MS, <a href="https://wfu.edu" target="_blank">Wake Forest University</a>, 1994</li>
-                <li>BS, <a href="https://wvutech.edu" target="_blank">West Virginia Institute of Technology</a>, 1992</li>
-            </ul>
-        </div>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <article class="edu-card">
+                    <a href="https://wvutech.edu" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-image-wrap edu-image-wrap-wvutech">
+                            <img src="images/education/WV_Institute_of_Technology.jpg" alt="West Virginia Institute of Technology campus" class="edu-campus">
+                        </div>
+                        <h3>West Virginia Institute of Technology</h3>
+                        <p>BS, 1992</p>
+                    </a>
+                </article>
+
+                <article class="edu-card">
+                    <a href="https://wfu.edu" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-image-wrap">
+                            <img src="images/education/Wake_Forest_University.jpg" alt="Wake Forest University campus" class="edu-campus">
+                        </div>
+                        <h3>Wake Forest University</h3>
+                        <p>MS, 1994</p>
+                    </a>
+                </article>
+
+                <article class="edu-card">
+                    <a href="https://utah.edu" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-image-wrap">
+                            <img src="images/education/University_of_Utah.jpg" alt="University of Utah campus" class="edu-campus">
+                        </div>
+                        <h3>University of Utah</h3>
+                        <p>PhD, 2001</p>
+                    </a>
+                </article>
+            </div>
+        </section>
     </div>
 
 </body>
