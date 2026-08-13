@@ -3,298 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Thompson | Personal Site</title>
-    <style>
-        /* Clean & Professional Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fdf5e6; /* Cream Background */
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .banner {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: -75px auto 50px; /* Pulls content up over the banner slightly */
-            padding: 20px;
-            text-align: center;
-            background: rgba(253, 245, 230, 0.9); /* Slight transparency */
-            border-radius: 15px;
-        }
-
-        .portrait {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%; /* Makes it a circle */
-            object-fit: cover;
-            border: 5px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin-top: 20px;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .social-links {
-            margin-top: 10px;
-        }
-
-        .social-link {
-            display: inline-block;
-            color: #0077b5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .social-link:hover {
-            text-decoration: underline;
-        }
-
-        .social-separator {
-            margin: 0 12px;
-            color: #999;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 40px auto;
-            width: 50%;
-        }
-
-        .info-section {
-            text-align: center;
-            display: inline-block;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 15px;
-        }
-
-        a {
-            color: #2c3e50;
-            text-decoration: none;
-            border-bottom: 1px solid #ccc;
-        }
-
-        a:hover {
-            color: #e67e22;
-            border-bottom-color: #e67e22;
-        }
-
-        .social-links a {
-            border-bottom: none;
-        }
-
-        .education-section {
-            margin-top: 10px;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 28px;
-            text-align: center;
-        }
-
-        .edu-card h3 {
-            margin: 14px 0 6px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .edu-card p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .edu-card a {
-            border-bottom: none;
-            color: inherit;
-        }
-
-        .edu-card a:hover {
-            color: #e67e22;
-        }
-
-        .edu-card {
-            position: relative;
-        }
-
-        .edu-image-wrap {
-            position: relative;
-            aspect-ratio: 2 / 3;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-        }
-
-        .edu-image-wrap > .edu-campus {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: filter 0.45s ease, transform 0.45s ease;
-        }
-
-        .education-grid:has(.edu-card:hover) .edu-card:not(:hover) .edu-campus {
-            filter: grayscale(100%);
-        }
-
-        .edu-card:hover .edu-image-wrap {
-            z-index: 1;
-        }
-
-        .edu-card:hover .edu-campus {
-            transform: scale(1.1);
-        }
-
-        .edu-image-wrap-wvutech .edu-campus {
-            object-position: 28% center;
-        }
-
-        .filmography-section {
-            margin-top: 10px;
-        }
-
-        .filmography-scroll {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 8px 4px 20px;
-            margin-top: 28px;
-            scroll-snap-type: x proximity;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: #bbb transparent;
-        }
-
-        .filmography-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .filmography-scroll::-webkit-scrollbar-thumb {
-            background: #bbb;
-            border-radius: 4px;
-        }
-
-        .film-card {
-            flex: 0 0 180px;
-            position: relative;
-            scroll-snap-align: start;
-            text-align: center;
-        }
-
-        .film-card a {
-            border-bottom: none;
-            color: inherit;
-        }
-
-        .film-card a:hover {
-            color: #e67e22;
-        }
-
-        .film-card h3 {
-            margin: 12px 0 0;
-            font-size: 0.85rem;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .film-image-wrap {
-            position: relative;
-            aspect-ratio: 2 / 3;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-        }
-
-        .film-image-wrap > .film-poster {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: filter 0.45s ease, transform 0.45s ease;
-        }
-
-        .filmography-scroll:has(.film-card:hover) .film-card:not(:hover) .film-poster {
-            filter: grayscale(100%);
-        }
-
-        .film-card:hover .film-image-wrap {
-            z-index: 1;
-        }
-
-        .film-card:hover .film-poster {
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            .portrait {
-                width: 260px;
-                height: 260px;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
-                max-width: 320px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    </style>
+    <title>About — Tom Thompson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <img src="images/banner.png" alt="Banner Image" class="banner">
+    <header id="site-header">
+        <nav id="site-nav">
+            <a href="index.html" class="nav-brand">Tom Thompson</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">About</a></li>
+                <li><a href="filmography.html">Filmography</a></li>
+                <li><a href="cinematics.html">Cinematics</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <div id="nav-social">
+                <a href="https://github.com/tvthompsonii" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/tom-thompson-ii" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" class="social-link obf-email" data-u="tvthompsonii" data-d="gmail.com">[email]</a>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <!-- Profile Section -->
-        <img src="images/portrait.jpg" alt="Tom Thompson" class="portrait">
-        <h1>Thomas V Thompson II</h1>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/tom-thompson-ii" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <span class="social-separator">|</span>
-            <a href="resources/TomThompsonResume2026.pdf" class="social-link" target="_blank" rel="noopener noreferrer">Resume</a>
-        </div>
+    <main>
+        <section class="about-hero">
+            <img src="images/portrait.jpg" alt="Tom Thompson" class="portrait">
+            <div class="about-intro">
+                <h1>Tom Thompson</h1>
+                <p class="headline">Senior Software Engineer</p>
+            </div>
+        </section>
 
         <hr>
 
+        <section class="about-intro"></section>
+        <div class="about-intro">
+            <p>I'm a software engineer with a passion for getting to the heart of the problem. I have a strong background in film and cinematic development, and I'm always looking for new ways to improve the process. Focused on simplification for the user, and the developer, to cover the 85% and still making sure the other 15% can be accomplished.</p>
+                <br>
+                <p>Let artists do art and let the tech support them without getting in the way.</p>
+            </div>
+        </section>
 
-        <!-- Education Section -->
+        <hr>
         <section class="education-section">
             <h2>Education</h2>
             <div class="education-grid">
@@ -303,7 +60,7 @@
                         <div class="edu-image-wrap edu-image-wrap-wvutech">
                             <img src="images/education/WV_Institute_of_Technology.jpg" alt="West Virginia Institute of Technology campus" class="edu-campus">
                         </div>
-                        <h3>West Virginia Institute of Technology</h3>
+                        <h3>WV Institute of Technology</h3>
                         <p>BS, 1992</p>
                     </a>
                 </article>
@@ -324,146 +81,13 @@
                             <img src="images/education/University_of_Utah.jpg" alt="University of Utah campus" class="edu-campus">
                         </div>
                         <h3>University of Utah</h3>
-                        <p>PhD, 2001</p>
+                        <p>PhD, 2006</p>
                     </a>
                 </article>
             </div>
         </section>
+    </main>
 
-        <hr>
-
-        <!-- Filmography Section -->
-        <section class="filmography-section">
-            <h2>Filmography</h2>
-            <div class="filmography-scroll">
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=SuyLeUjuT_k" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Kangaroo_Jack.jpg" alt="Kangaroo Jack poster" class="film-poster">
-                        </div>
-                        <h3>Kangaroo Jack</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=dVlza5ndrZc" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Reign_of_Fire.webp" alt="Reign of Fire poster" class="film-poster">
-                        </div>
-                        <h3>Reign of Fire</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=VUBFCaWiQ28" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Chicken_Little.webp" alt="Chicken Little poster" class="film-poster">
-                        </div>
-                        <h3>Chicken Little</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=S396-fnLldk" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Meet_the_Robinsons.jpg" alt="Meet the Robinsons poster" class="film-poster">
-                        </div>
-                        <h3>Meet the Robinsons</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=Pj0a7GkMH3w" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Bolt.jpg" alt="Bolt poster" class="film-poster">
-                        </div>
-                        <h3>Bolt</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=HWEW_qTLSEE" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Up.jpg" alt="Up poster" class="film-poster">
-                        </div>
-                        <h3>Up</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=i6-RJDJjkEg" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/A_Chistmas_Carol.jpg" alt="A Christmas Carol poster" class="film-poster">
-                        </div>
-                        <h3>A Christmas Carol</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=uQBy6jqbmlU" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/The_Princess_and_the_Frog.jpg" alt="The Princess and the Frog poster" class="film-poster">
-                        </div>
-                        <h3>The Princess and the Frog</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=e_YZRzCuf84" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Toy_Story_3.jpg" alt="Toy Story 3 poster" class="film-poster">
-                        </div>
-                        <h3>Toy Story 3</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=DLpXhJZ804c" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Tangled.jpg" alt="Tangled poster" class="film-poster">
-                        </div>
-                        <h3>Tangled</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=JWYVQzG0rYk" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Mars_Needs_Moms.jpg" alt="Mars Needs Moms poster" class="film-poster">
-                        </div>
-                        <h3>Mars Needs Moms</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=lg5hj2c5Nkk" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Cars_2.jpg" alt="Cars 2 poster" class="film-poster">
-                        </div>
-                        <h3>Cars 2</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=87E6N7ToCxs" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Wreck_it_Ralph.webp" alt="Wreck-It Ralph poster" class="film-poster">
-                        </div>
-                        <h3>Wreck-It Ralph</h3>
-                    </a>
-                </article>
-
-                <article class="film-card">
-                    <a href="https://www.youtube.com/watch?v=TbQm5doF_Uc" target="_blank" rel="noopener noreferrer">
-                        <div class="film-image-wrap">
-                            <img src="images/filmography/Frozen.webp" alt="Frozen poster" class="film-poster">
-                        </div>
-                        <h3>Frozen</h3>
-                    </a>
-                </article>
-            </div>
-        </section>
-    </div>
-
+    <script src="js/site.js"></script>
 </body>
 </html>

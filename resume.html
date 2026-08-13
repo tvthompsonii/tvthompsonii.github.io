@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume — Tom Thompson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="site-header">
+        <nav id="site-nav">
+            <a href="index.html" class="nav-brand">Tom Thompson</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="filmography.html">Filmography</a></li>
+                <li><a href="cinematics.html">Cinematics</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+            </ul>
+            <div id="nav-social">
+                <a href="https://github.com/tvthompsonii" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/tom-thompson-ii" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" class="social-link obf-email" data-u="tvthompsonii" data-d="gmail.com">[email]</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="resume-page">
+        <header class="resume-header">
+            <div class="resume-header-top">
+                <h1>Thomas V Thompson II, Ph.D.</h1>
+                <a href="resources/TomThompsonResume2026.pdf" class="social-link resume-print-btn" target="_blank" rel="noopener noreferrer">Print | Save</a>
+            </div>
+            <p class="resume-contact">
+                Corona, CA |
+                (818) 915-1716 |
+                <a href="#" class="obf-email obf-email-inline" data-u="tvthompsonii" data-d="gmail.com">click for email</a> |
+                <a href="https://www.linkedin.com/in/tom-thompson-ii" target="_blank" rel="noopener noreferrer">linkedin.com/in/tom-thompson-ii</a>
+            </p>
+        </header>
+
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>Software &amp; Pipeline Engineer with over two decades of expertise architecting high-performance graphics, procedural geometry, and rendering pipelines for feature animation and games. Primary creator of XGen (now integrated into Autodesk Maya as an industry standard) and 3-time Academy Scientific and Technical Award nominee. Proven track record of solving complex problems by seeing through to the simplifying fundamentals. Expert in bridging real-time and offline workflows, procedural foliage/hair systems, and cross-DCC integrations using C++, Python, and Unreal Engine 5.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Honors and Impact</h2>
+            <ul>
+                <li>3-time Academy Scientific and Technical Award Nominee (Motion Picture Academy) — Recognized for the architectural creation and industry impact of XGen, iGroom, and Bonsai.</li>
+                <li>Leonard C. Nelson Presidential Leadership Award as the most outstanding graduate of WVIT.</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+            <ul class="resume-skills">
+                <li><b>Languages:</b> C++, Python, C, Qt / PySide / PyQt</li>
+                <li><b>Engine &amp; Pipeline Architecture:</b> Unreal Engine 5, Katana, Maya API, XGen, Alembic, Hair Pipelines</li>
+                <li><b>Rendering &amp; Graphics:</b> RenderMan, Redshift, Procedural Geometry, Instancing (Hair/Fur/Geometry)</li>
+                <li><b>Core Competencies:</b> Systems Architecture, Distributed Computation, Technical Leadership/Mentoring</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Experience</h2>
+
+            <article class="resume-job">
+                <div class="resume-job-meta">
+                    <a href="https://lightspeed.la/" class="resume-company" target="_blank" rel="noopener noreferrer">Lightspeed LA</a>
+                    <span class="resume-location">Irvine, CA</span>
+                    <span class="resume-dates">Mar 2023 – Jul 2026</span>
+                </div>
+                <h3 class="resume-title">Senior Tools Engineer III</h3>
+                <ul>
+                    <li>Led technical integration of narrative cinematics within the game.</li>
+                    <li>Designed and created several custom tools for importing and updating sequencer content.</li>
+                    <li>Developed hair tools to convert XGen grooms to tileable flow maps for efficient fur shaders.</li>
+                    <li>Streamlined studio-wide rendering workflows for frame accurate cinematic exports.</li>
+                    <li>Implemented tools for Vcam recording, capture, and export to shot cameras.</li>
+                </ul>
+            </article>
+
+            <article class="resume-job">
+                <div class="resume-job-meta">
+                    <a href="https://www.imagendary.com/" class="resume-company" target="_blank" rel="noopener noreferrer">Imagendary Studios</a>
+                    <span class="resume-location">Irvine, CA</span>
+                    <span class="resume-dates">Feb 2022 – Jan 2023</span>
+                </div>
+                <h3 class="resume-title">Senior Core Software Engineer</h3>
+                <ul>
+                    <li>Technical lead of “Core Team” initiatives to design cinematic workflows, data asset pipelines, remote production workflows, and DCC integrations.</li>
+                    <li>Engineered tools to export XGen grooms and shot caches from Maya for use in Unreal Engine 5.</li>
+                </ul>
+            </article>
+
+            <article class="resume-job">
+                <div class="resume-job-meta">
+                    <a href="https://www.blizzard.com/" class="resume-company" target="_blank" rel="noopener noreferrer">Blizzard Entertainment</a>
+                    <span class="resume-location">Irvine, CA</span>
+                    <span class="resume-dates">Mar 2012 – Feb 2022</span>
+                </div>
+                <h3 class="resume-title">Senior Software Engineer II</h3>
+                <ul>
+                    <li>Architected Belaro, an end-to-end groom-agnostic hair rendering and animation pipeline.</li>
+                    <li>Designed MobBoss, a rendering pipeline for instanced, animated, and modifiable crowds.</li>
+                    <li>Engineered the Scatter toolset, a cross-department rendering solution for mass instancing of geometry.</li>
+                    <li>Authored render-time auto-instancing for complex Katana scenes to reduce the memory footprint.</li>
+                    <li>Subject matter expert on procedural geometry and complexity management.</li>
+                    <li>Served as primary studio liaison to Autodesk, Pixar, and Redshift for XGen.</li>
+                </ul>
+            </article>
+
+            <article class="resume-job">
+                <div class="resume-job-meta">
+                    <a href="https://www.disneyanimation.com/" class="resume-company" target="_blank" rel="noopener noreferrer">Walt Disney Animation Studios</a>
+                    <span class="resume-location">Burbank, CA</span>
+                    <span class="resume-dates">Jan 2001 – Mar 2012</span>
+                </div>
+                <h3 class="resume-title">Senior Development Software Engineer</h3>
+                <ul>
+                    <li>Lead architect of XGen, studio’s arbitrary instancing engine used for hair, fur, grass, leaves, trees, layout, stitchwork, and much more. Now part of Autodesk Maya and used by dozens of studios.</li>
+                    <li>Patented key interpolation algorithms, “Determining Guide Connectivity”, for procedural geometry.</li>
+                    <li>Delivered specialized XGen training for artists and technical directors and presented onsite at Disney Animation, Pixar, ImageMovers Digital, Digital Domain, and DisneyToon Studios.</li>
+                    <li>Designed Bonsai, a procedural forest/tree/foliage generation, animation, and rendering system.</li>
+                    <li>Authored an interactive fur grooming toolset, iGroom, to be integrated as an XGen front end.</li>
+                    <li>Built ImageToolkit as a set of unifying image manipulation libraries used by all tools.</li>
+                    <li>Software Supervisor for Lookdev/FX tools group managing 20+ people.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="resume-section">
+            <h2>Additional Experience</h2>
+            <ul>
+                <li>
+                    <a href="https://www.utah.edu/" class="resume-company" target="_blank" rel="noopener noreferrer">University of Utah</a>
+                    <span class="resume-role"> (Research Staff):</span>
+                    Real-time geometry computation, haptic rendering algorithms, active prototyping, distributed computation systems.
+                </li>
+                <li>
+                    <a href="https://www.hpe.com/us/en/cray.html" class="resume-company" target="_blank" rel="noopener noreferrer">Cray Research Inc</a>
+                    <span class="resume-role"> (Intern):</span>
+                    Vectorized rendering routines in RenderMan and optimized AVS for Cray-YMP supercomputers.
+                </li>
+                <li>
+                    <a href="https://www.darpa.mil/" class="resume-company" target="_blank" rel="noopener noreferrer">DARPA</a>
+                    <span class="resume-role"> (Intern):</span>
+                    Designed neural networks, fuzzy logic, and hybrid algorithms in Ada to classify seismographic event data as either an earthquake or an underground nuclear test.
+                </li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+
+            <article class="resume-entry">
+                <a href="https://www.utah.edu/" class="resume-school" target="_blank" rel="noopener noreferrer">University of Utah</a>
+                <div class="resume-degree">Ph.D., Computer Science</div>
+                <p>Salt Lake City, UT</p>
+                <p><i>Dissertation:</i> “Haptic Rendering of Trimmed NURBS Models within an Active Prototyping Environment”</p>
+            </article>
+
+            <article class="resume-entry">
+                <a href="https://www.wfu.edu/" class="resume-school" target="_blank" rel="noopener noreferrer">Wake Forest University</a>
+                <div class="resume-degree">M.S., Computer Science</div>
+                <p>Winston-Salem, NC</p>
+                <p><i>Thesis:</i> “Three Dimensional Polygon-Mesh Morphology”</p>
+            </article>
+
+            <article class="resume-entry">
+                <a href="https://www.wvutech.edu/" class="resume-school" target="_blank" rel="noopener noreferrer">West Virginia Institute of Technology</a>
+                <div class="resume-degree">B.S., Computer Science</div>
+                <p>Montgomery, WV</p>
+                <p><i>Honors:</i> Alpha Chi Honor Fraternity, Presidential Leadership Award</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/site.js"></script>
+</body>
+</html>

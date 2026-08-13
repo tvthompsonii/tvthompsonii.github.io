@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Tom Thompson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="site-header">
+        <nav id="site-nav">
+            <a href="index.html" class="nav-brand">Tom Thompson</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="filmography.html">Filmography</a></li>
+                <li><a href="cinematics.html">Cinematics</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <div id="nav-social">
+                <a href="https://github.com/tvthompsonii" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/tom-thompson-ii" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" class="social-link obf-email" data-u="tvthompsonii" data-d="gmail.com">[email]</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="portfolio-page">
+        <h1>Portfolio</h1>
+        <p class="section-lead">This is a short summary of a few of the tools and systems I worked on over the years. There are many others, but these are selected for both thier variety and for being the ones I'm most proud of.</p>
+        <div class="featured-grid">
+            <article class="project-card project-card-featured">
+                <div class="card-image">
+                    <img src="images/portfolio/xgen.png" alt="Tangled lanterns - XGen">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>XGen — Arbitrary Primitive Generator</h3>
+                    </div>
+                    <p class="project-summary">A flexible authoring system for placing and varying arbitrary primitives across surfaces. Primarily used as a grooming and animation tool for hair, it was also used as an instancing tool for grass, leaves, rocks, garland, fruit, and more. In this shot it was used for both hairstyles and the flowers in Rapunzel's hair.<br><i>Nominated for an Academy Scientific and Technical Award.</i></p>
+                    
+                    <div class="subprojects">
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Arbitrary Primitive</span>
+                            </div>
+                            <p>The primary primitive type is curves, which are used for hair. An artist can place guide curves anywhere on the model and get naturally interpolated results. FX modules can be used to apply clumping, noise, curl, and other effects. The archive primitive type allows instancing any cached geometry, such as flowers or even trees.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Distribution &amp; Generation</span>
+                            </div>
+                            <p>Primitive distribution is controlled by a Generator module. A built-in "random" generator can be used for hair generation and accounts for both density and shape variations across the surface. Other methods are also provided, including grid and point-based approaches, to allow precise control.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Pipeline Integration &amp; Rendering</span>
+                            </div>
+                            <p>XGen provides multiple methods to integrate it into the asset generation, production, and rendering pipelines. For rendering, an artist can choose GL preview, geometry caching, or RenderMan support — both into DRA archives and through run-time generation with a RenderMan procedural.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-card-featured">
+                <div class="card-image">
+                    <img src="images/portfolio/bonsai.png" alt="Trees from Frozen 2">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Bonsai — Procedural Trees</h3>
+                    </div>
+                    <p class="project-summary">A procedural vegetation toolkit for growing editable trees from compact rules, then exporting production-ready geometry and LODs, allowing both procedural growth and artistic direction.<br><i>Nominated for an Academy Scientific and Technical Award.</i></p>
+                    <div class="subprojects">
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Node Graph</span>
+                            </div>
+                            <p>Each tree is described using a node graph. The nodes can be as simple as "trunk" or "branch". The parameters on the node are used to control the output of that node. For example, the trunk node has parameters to control its shape, whereas the branch node can indicate the number of branches, direction, and so forth. All of the values can be affected by a random "jitter" which is controlled by a global random seed per tree, allowing for variation in the tree's shape and structure.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Instancing &amp; Rendering</span>
+                            </div>
+                            <p>In complex scenes it is necessary to instance as much as possible. In some cases you will want to instance the whole tree, perhaps in a large forest where a few unique trees may be enough. In other scenes you may need unique branch structures, such as when the trees are in the foreground to midground, and in those cases you will instance only the leaves. Both are supported by passing render-time variation variables to the Bonsai procedural.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-card-featured">
+                <div class="card-image">
+                    <img src="images/portfolio/mobboss.png" alt="Zergling swarm in Legacy of the Void">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>MobBoss — Instanced Crowds</h3>
+                    </div>
+                    <p class="project-summary">Flexible crowd system for packing dense background populations into scenes while keeping memory and complexity in check. Focused heavily on instancing control and variation.</p>
+                    <div class="subprojects">
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Agent Animation</span>
+                            </div>
+                            <p>Each crowd agent has a predefined animation path, speed, and animation cycle. The speed is used to reference the cycle frames at the appropriate rate to keep the animation playing correctly without sliding. Each of these parameters can be procedurally assigned or overridden by the user.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Instancing &amp; Overrides</span>
+                            </div>
+                            <p>At a high level the artist can indicate the number of unique instances that should be used. This can then be used to drive the speed and cycles, and frame offsets within the cycle, that can be used to limit the unique agents. Each agent also has an ID that allows its material properties to be modified on a per-agent basis.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Procedural Rendering</span>
+                            </div>
+                            <p>The crowd definition file is passed directly to the render procedural to instance each agent at render time. No memory is lost in the lighting tool by trying to represent the agents or their geometry. The agent geometry only exists when needed and is instanced as appropriate.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-card-featured">
+                <div class="card-image">
+                    <img src="images/portfolio/belaro.png" alt="Belaro placeholder banner">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Belaro — Groom-Agnostic Hair Animation and Rendering</h3>
+                    </div>
+                    <p class="project-summary">Each hair system tends to have its own unique rendering solution, often for a specific renderer. This system was designed to be a generic solution that could be used with any hair system and renderer.</p>
+                    <div class="subprojects">
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Static Groom</span>
+                            </div>
+                            <p>The static groom is captured in a single Alembic file. Each curve has metadata for its width, taper, and clump ID. Optionally, it can also store the underlying face ID and intrinsic UVs so that other shading parameters can be read from Ptex maps at render time.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Animation Guides</span>
+                            </div>
+                            <p>A set of curves that represent the central axis of each clump, the clump guides, is stored in a second Alembic file. This holds the animation of those guide curves to drive the animation of hairs within the clump.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Rendering &amp; Shading</span>
+                            </div>
+                            <p>Each hair is read from the static alembic file and animated in turn using its associated animation guide. It is then exported to the renderer with the different shading parameters. Optionally, the animated hair can be affected in some small measure by neighboring guide curves. This helps to create a more natural look without harsh breaks between clumps.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-card-featured">
+                <div class="card-image">
+                    <img src="images/portfolio/sequencer.png" alt="Unreal 5 Sequencer Pipeline placeholder banner">
+                </div>
+                <div class="project-body">
+                    <div class="project-header">
+                        <h3>Unreal 5 Sequencer Pipeline</h3>
+                    </div>
+                    <p class="project-summary">A production pipeline around UE5 Sequencer for authoring, reviewing, rendering, and shipping cinematic shots with fewer manual steps and broken handoffs.</p>
+                    <div class="subprojects">
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Shot Assembly</span>
+                            </div>
+                            <p>The data making up a shot is specified within a JSON manifest file exported from Maya as part of layout. The animators export per-shot information that goes into shot manifest files. Finally, the importer in UE5 reads these files to create or update level sequences to be assembled in Sequencer.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Review Workflow</span>
+                            </div>
+                            <p>All animated actors in Sequencer are represented as "spawnables" so the sequence can play back regardless of level or level content. This allows seamless review of the sequence within the editor and via the Movie Render Graph. Artists can scrub the timeline, view animation with shot cameras or the viewport camera, and make edits all within the editor.</p>
+                        </div>
+                        <div class="subproject">
+                            <div class="subproject-header">
+                                <span class="subproject-title">Gameplay Integration</span>
+                            </div>
+                            <p>Within the game, a special version of the level sequence actor identifies which actors should remain spawnable and which should be converted to possessable to animate an existing actor in the game. This allows for seamless integration of the cinematic shots into the game without having to manually adjust the level content.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="js/site.js"></script>
+</body>
+</html>

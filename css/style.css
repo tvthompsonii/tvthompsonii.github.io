@@ -1,0 +1,741 @@
+:root {
+    --bg: #1e1e1e;
+    --surface: #2d2d2d;
+    --header: #141414;
+    --text: #f8f8f2;
+    --text-muted: #75715e;
+    --border: #49483e;
+    --accent-blue: #66d9ef;
+    --accent-blue-hover: #8be4f5;
+    --accent-warm: #fd971f;
+    --accent-lime: #a6e22e;
+    --nav-height: 56px;
+    --content-max: 1000px;
+    --radius: 3px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Mono', 'Cascadia Code', Consolas, 'Courier New', monospace;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent-warm);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6db74;
+    text-decoration: underline;
+}
+
+#site-header {
+    background: var(--header);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+#site-nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-brand {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-brand:hover {
+    color: var(--accent-blue-hover);
+    text-decoration: none;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+#nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.15s, background 0.15s;
+    display: block;
+    border-bottom: none;
+}
+
+#nav-links a:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+}
+
+#nav-links a.active {
+    color: var(--accent-warm);
+}
+
+#nav-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.social-link {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.social-link:hover {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.obf-email {
+    cursor: pointer;
+}
+
+.obf-email-inline {
+    color: var(--accent-warm);
+    text-decoration: none;
+}
+
+.obf-email-inline:hover {
+    color: #e6db74;
+    text-decoration: underline;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-muted);
+    border-radius: 1px;
+}
+
+main {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 3rem;
+}
+
+h1 {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--accent-blue);
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 2.5rem 0;
+}
+
+.section-lead {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.about-hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+}
+
+.portrait {
+    width: 165px;
+    height: 165px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 3px solid var(--accent-blue);
+    box-shadow: 0 10px 28px rgba(166, 226, 46, 0.35);
+    flex-shrink: 0;
+}
+
+.about-intro h1 {
+    margin-bottom: 0.35rem;
+}
+
+.headline {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    color: var(--accent-warm);
+    font-size: 1.1rem;
+}
+
+.about-links {
+    margin-top: 1rem;
+}
+
+.about-links a {
+    margin-right: 1rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.edu-card {
+    position: relative;
+}
+
+.edu-card h3 {
+    margin: 14px 0 6px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.edu-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.edu-card a {
+    border-bottom: none;
+    color: inherit;
+}
+
+.edu-card a:hover {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.edu-image-wrap {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--border);
+}
+
+.edu-image-wrap > .edu-campus {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.education-grid:has(.edu-card:hover) .edu-card:not(:hover) .edu-campus {
+    filter: grayscale(100%);
+}
+
+.edu-card:hover .edu-image-wrap {
+    z-index: 1;
+}
+
+.edu-card:hover .edu-campus {
+    transform: scale(1.1);
+}
+
+.edu-image-wrap-wvutech .edu-campus {
+    object-position: 28% center;
+}
+
+.filmography-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.film-card {
+    position: relative;
+}
+
+.film-card a {
+    border-bottom: none;
+    color: inherit;
+}
+
+.film-card a:hover {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.film-card h3 {
+    margin: 14px 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.film-image-wrap {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--border);
+}
+
+.film-image-wrap > .film-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.filmography-grid:has(.film-card:hover) .film-card:not(:hover) .film-poster {
+    filter: grayscale(100%);
+}
+
+.film-card:hover .film-image-wrap {
+    z-index: 1;
+}
+
+.film-card:hover .film-poster {
+    transform: scale(1.1);
+}
+
+.cinematics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.cinematic-card {
+    position: relative;
+}
+
+.cinematic-card a {
+    border-bottom: none;
+    color: inherit;
+}
+
+.cinematic-card a:hover {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.cinematic-card h3 {
+    margin: 14px 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cinematic-image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--border);
+}
+
+.cinematic-image-wrap > .cinematic-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+.cinematics-grid:has(.cinematic-card:hover) .cinematic-card:not(:hover) .cinematic-thumb {
+    filter: grayscale(100%);
+}
+
+.cinematic-card:hover .cinematic-image-wrap {
+    z-index: 1;
+}
+
+.cinematic-card:hover .cinematic-thumb {
+    transform: scale(1.1);
+}
+
+.placeholder-section {
+    color: var(--text-muted);
+    padding: 2rem 0;
+}
+
+.featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left-width: 3px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: background 0.15s;
+}
+
+.project-card:hover {
+    background: #363636;
+}
+
+.project-card:nth-child(1) { border-left-color: #f92672; }
+.project-card:nth-child(2) { border-left-color: var(--accent-warm); }
+.project-card:nth-child(3) { border-left-color: #e6db74; }
+.project-card:nth-child(4) { border-left-color: var(--accent-lime); }
+.project-card:nth-child(5) { border-left-color: var(--accent-blue); }
+
+.card-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card-featured:hover .card-image img {
+    transform: scale(1.02);
+}
+
+.project-body {
+    padding: 1rem 1.25rem 1.1rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-lime);
+}
+
+.project-summary {
+    font-size: 0.875rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
+    line-height: 1.55;
+}
+
+.subprojects {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 2px solid var(--border);
+    padding-left: 0.85rem;
+}
+
+.subproject-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.subproject-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.subproject p {
+    font-size: 0.785rem;
+    color: var(--text);
+    opacity: 0.7;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.resume-header {
+    margin-bottom: 2rem;
+}
+
+.resume-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-header-top h1 {
+    margin-bottom: 0;
+}
+
+.resume-print-btn {
+    flex-shrink: 0;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: inherit;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.resume-print-btn:hover {
+    background: transparent;
+}
+
+.resume-contact {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.resume-contact a {
+    border-bottom: none;
+}
+
+.resume-section {
+    margin-bottom: 2.25rem;
+}
+
+.resume-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.resume-section p,
+.resume-section li {
+    color: var(--text);
+}
+
+.resume-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-section ul li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.65rem;
+}
+
+.resume-section ul li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    top: 0.15rem;
+}
+
+.resume-job {
+    margin-bottom: 1.75rem;
+}
+
+.resume-job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.resume-company {
+    color: var(--accent-warm);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.resume-company:hover {
+    color: #e6db74;
+    text-decoration: underline;
+}
+
+.resume-location,
+.resume-dates {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.resume-title {
+    color: var(--accent-lime);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+}
+
+.resume-entry {
+    margin-bottom: 1rem;
+}
+
+.resume-school {
+    color: var(--accent-warm);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.resume-school:hover {
+    color: #e6db74;
+    text-decoration: underline;
+}
+
+.resume-degree,
+.resume-role {
+    color: var(--accent-lime);
+    font-weight: 600;
+}
+
+.resume-degree {
+    margin-top: 0.15rem;
+}
+
+.resume-edu-detail {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.resume-skills li::before {
+    content: none;
+}
+
+.resume-skills li {
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+.resume-skills strong {
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    #site-nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.75rem 1rem;
+        gap: 0;
+    }
+
+    #nav-links,
+    #nav-social {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding: 0.75rem 0 0.25rem;
+    }
+
+    #nav-links {
+        gap: 0;
+    }
+
+    #nav-social {
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #site-nav.nav-open #nav-links,
+    #site-nav.nav-open #nav-social {
+        display: flex;
+    }
+
+    .about-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .portrait {
+        width: 135px;
+        height: 135px;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .education-grid,
+    .filmography-grid,
+    .cinematics-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cinematics-grid {
+        max-width: 100%;
+    }
+}
