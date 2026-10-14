@@ -127,7 +127,8 @@ a:hover {
     text-decoration: none;
 }
 
-.obf-email {
+.obf-email,
+.obf-phone {
     cursor: pointer;
 }
 
@@ -531,8 +532,15 @@ hr {
     margin-bottom: 0.5rem;
 }
 
-.resume-header-top h1 {
-    margin-bottom: 0;
+.resume-page > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.resume-name {
+    color: var(--accent-lime);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .resume-print-btn {
@@ -555,7 +563,13 @@ hr {
 }
 
 .resume-contact a {
+    color: inherit;
     border-bottom: none;
+}
+
+.resume-contact a:hover {
+    color: var(--text);
+    text-decoration: underline;
 }
 
 .resume-section {
@@ -609,14 +623,14 @@ hr {
 }
 
 .resume-company {
-    color: var(--accent-warm);
+    color: var(--accent-lime);
     font-weight: 600;
     text-decoration: none;
     border-bottom: none;
 }
 
 .resume-company:hover {
-    color: #e6db74;
+    color: #c4f25c;
     text-decoration: underline;
 }
 
@@ -627,7 +641,7 @@ hr {
 }
 
 .resume-title {
-    color: var(--accent-lime);
+    color: var(--accent-warm);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.65rem;
@@ -638,20 +652,20 @@ hr {
 }
 
 .resume-school {
-    color: var(--accent-warm);
+    color: var(--accent-lime);
     font-weight: 600;
     text-decoration: none;
     border-bottom: none;
 }
 
 .resume-school:hover {
-    color: #e6db74;
+    color: #c4f25c;
     text-decoration: underline;
 }
 
 .resume-degree,
 .resume-role {
-    color: var(--accent-lime);
+    color: var(--accent-warm);
     font-weight: 600;
 }
 

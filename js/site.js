@@ -10,6 +10,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+document.addEventListener('click', (e) => {
+    const el = e.target.closest('.obf-phone');
+    if (!el) return;
+    e.preventDefault();
+    const { a, p, n } = el.dataset;
+    el.replaceWith(`(${a}) ${p}-${n}`);
+});
+
 const navToggle = document.getElementById('nav-toggle');
 const siteNav = document.getElementById('site-nav');
 
