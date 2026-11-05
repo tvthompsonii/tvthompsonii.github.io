@@ -647,6 +647,14 @@ hr {
     margin-bottom: 0.65rem;
 }
 
+.resume-job > .resume-title:first-child {
+    margin-bottom: 0.25rem;
+}
+
+.resume-job-line {
+    margin-bottom: 0.65rem;
+}
+
 .resume-entry {
     margin-bottom: 1rem;
 }
@@ -689,6 +697,19 @@ hr {
 
 .resume-skills strong {
     color: var(--text-muted);
+}
+
+.resume-section .resume-skills-plain li {
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+.resume-section .resume-skills-plain li::before {
+    content: none;
+}
+
+.resume-accent-labels b {
+    color: var(--accent-warm);
 }
 
 @media (max-width: 768px) {
